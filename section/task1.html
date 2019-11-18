@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TASK1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: row;
+        }
+
+        .world {
+            background-color: black;
+            color: white;
+            padding: 20px
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
+
+        .content1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content2 {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div id='world' class="world">
+            <iframe width="500" height="500" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="50%"></iframe>
+            <h1>hello world</h1>
+            <h1>This Is My First Task In Html</h1>
+            <div class="content">
+                <div class="content1">
+                    <input id='backgroundColor' type="color"><br>
+                    <button class="btn btn-info" onclick="changingFactor()">Apply BG</button>
+                </div>
+                <div class="content2">
+                    <input id='textColor' type="color"><br>
+                    <button class="btn btn-success" onclick="changingColor()">Apply Color</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changingFactor() {
+            let bgColor = document.getElementById("backgroundColor").value;
+            document.getElementById("world").style.backgroundColor = bgColor
+        }
+
+        function changingColor() {
+            let coloring = document.getElementById('textColor').value;
+            document.getElementById('world').style.color = coloring
+        }
+    </script>
+</body>
+
+</html>
